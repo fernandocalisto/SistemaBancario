@@ -41,7 +41,13 @@ public class Main {
             }
             else if (operacao == 3){
                 System.out.print("Insira o valor a transferir: ");
-                saldo -= leitura.nextDouble();
+                double valor = leitura.nextDouble();
+                if (valor > saldo){
+                    System.out.println("Saldo insuficiente para esta transação!");
+                }
+                else{
+                    saldo -= valor;
+                }
             }
             else if (operacao == 4){
                 System.out.println("Ok, Até a próxima!");
